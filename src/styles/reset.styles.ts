@@ -31,4 +31,13 @@ export const cssReset = css`
   select {
     font: inherit;
   }
+
+  button {
+    border: none;
+    line-height: normal;
+
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+    -webkit-appearance: none;
+  }
 `;
