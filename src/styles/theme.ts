@@ -8,7 +8,7 @@ export const theme = {
         light: "#A58BFF",
         lightest: "#EEF1FE",
       },
-      secondary: { default: "#9CA5FA" },
+      secondary: { default: "#FDF9D3" },
       tertiary: { default: "#E9FBFE" },
     },
     neutral: {

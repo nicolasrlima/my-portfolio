@@ -1,5 +1,5 @@
 import { screen } from "@testing-library/react";
-import { renderWithTheme } from "../../../tests/utils";
+import { renderWithTheme } from "tests/utils";
 import Typography from "../Typography";
 
 it("renders a Typography", () => {

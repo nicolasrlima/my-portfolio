@@ -8,7 +8,7 @@ import {
 
 export interface TypographyProps extends HTMLAttributes<HTMLElement> {
   /**
-   * Determines the font family.
+   * Determines the HTML tag that will be rendered.
    *
    * @remarks
    * See {@link JSX.IntrinsicElements} for available options.
