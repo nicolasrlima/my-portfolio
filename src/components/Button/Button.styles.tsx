@@ -7,9 +7,10 @@ export const CustomButton = styled.button`
   border-left-width: 1px;
   border-right-width: 4px;
   border-top-width: 1px;
+  transition: all 0.2s ease-in-out;
 
   ${({ theme }) => `
-    background-color: ${theme.colors.neutral.white};
+    background-color: transparent;
     border-color: ${theme.colors.neutral.dark};
     color: ${theme.colors.neutral.dark};
     font-size: ${theme.typography.fontSize.xsmall};

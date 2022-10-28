@@ -1,4 +1,10 @@
-export const theme = {
+import { RootTheme } from "./Theme.types";
+
+export const theme: RootTheme = {
+  breakpoints: {
+    mobile: "720px",
+    tablet: "1024px",
+  },
   colors: {
     brand: {
       primary: {

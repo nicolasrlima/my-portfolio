@@ -1,3 +1,8 @@
+export interface Breakpoints {
+  mobile: string;
+  tablet: string;
+}
+
 export interface Primary {
   darkest: string;
   dark: string;
@@ -94,6 +99,7 @@ export interface Typography {
 }
 
 export interface RootTheme {
+  breakpoints: Breakpoints;
   colors: Colors;
   border: Border;
   boxShadow: BoxShadow;
