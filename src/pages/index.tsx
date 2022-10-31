@@ -5,6 +5,8 @@ import { Header } from "components/Header";
 import { Typography } from "components/Typography";
 import { Link } from "components/Link";
 import { Logo } from "icons/Logo";
+import { IconButton } from "components/IconButton";
+import { Languages } from "icons/Languages";
 
 const Home: NextPage = () => {
   return (
@@ -25,6 +27,7 @@ const Home: NextPage = () => {
           <Link href="#now">Now</Link>
           <Link href="#contact">Contact</Link>
           <Button>Resume</Button>
+          <IconButton icon={<Languages />} />
         </Header>
         <Button>Button</Button>
         <Typography fontFamily="primary">Typography</Typography>
