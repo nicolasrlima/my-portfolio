@@ -1,13 +1,9 @@
 import { Typography } from "components/Typography";
-import NextLink, { LinkProps } from "next/link";
+import NextLink from "next/link";
 import { CustomAnchor } from "./Link.styles";
+import { LinkProps } from "./Link.types";
 
-const Link = ({
-  children,
-  ...props
-}: Omit<LinkProps, "passHref"> & {
-  children?: React.ReactNode;
-}) => {
+const Link = ({ children, ...props }: LinkProps) => {
   return (
     <NextLink passHref {...props}>
       <CustomAnchor>

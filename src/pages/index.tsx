@@ -7,6 +7,12 @@ import { Link } from "components/Link";
 import { Logo } from "icons/Logo";
 import { IconButton } from "components/IconButton";
 import { Languages } from "icons/Languages";
+import {
+  DropdownMenuRoot,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from "components/DropdownMenu";
 
 const Home: NextPage = () => {
   return (
@@ -27,7 +33,16 @@ const Home: NextPage = () => {
           <Link href="#now">Now</Link>
           <Link href="#contact">Contact</Link>
           <Button>Resume</Button>
-          <IconButton icon={<Languages />} />
+          <DropdownMenuRoot>
+            <DropdownMenuTrigger asChild>
+              <IconButton aria-label="Change language" icon={<Languages />} />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuItem>English</DropdownMenuItem>
+              <DropdownMenuItem>Spanish</DropdownMenuItem>
+              <DropdownMenuItem>Portuguese</DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenuRoot>
         </Header>
         <Button>Button</Button>
         <Typography fontFamily="primary">Typography</Typography>

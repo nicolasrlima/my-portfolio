@@ -2,7 +2,10 @@ import styled from "@emotion/styled";
 
 export const CustomButton = styled.button`
   cursor: pointer;
+  height: 32px;
   padding: 0;
+  width: 32px;
+
   & > svg > path {
     transition: all 0.2s ease-in-out;
   }

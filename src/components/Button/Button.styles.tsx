@@ -7,6 +7,7 @@ export const CustomButton = styled.button`
   border-left-width: 1px;
   border-right-width: 4px;
   border-top-width: 1px;
+  height: 56px;
   transition: all 0.2s ease-in-out;
 
   ${({ theme }) => `

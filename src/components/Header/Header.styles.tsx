@@ -45,6 +45,7 @@ export const HeaderHamburgerContainer = styled.div<Pick<MenuProps, "isOpen">>`
 `;
 
 export const HeaderNavContainer = styled.div`
+  align-items: center;
   display: none;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.mobile}) {

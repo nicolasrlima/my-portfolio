@@ -1,8 +1,13 @@
-import { HTMLAttributes } from "react";
+import { forwardRef, ForwardRefRenderFunction, HTMLAttributes } from "react";
 import { CustomButton } from "./Button.styles";
 
-const Button = ({ children, ...props }: HTMLAttributes<HTMLButtonElement>) => (
-  <CustomButton {...props}>{children}</CustomButton>
+const Button: ForwardRefRenderFunction<
+  HTMLButtonElement,
+  HTMLAttributes<HTMLButtonElement>
+> = ({ children, ...props }, ref) => (
+  <CustomButton ref={ref} {...props}>
+    {children}
+  </CustomButton>
 );
 
-export default Button;
+export default forwardRef(Button);
