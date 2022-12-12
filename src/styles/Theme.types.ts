@@ -19,23 +19,58 @@ export interface Tertiary {
   default: string;
 }
 
-export interface Brand {
-  primary: Primary;
-  secondary: Secondary;
-  tertiary: Tertiary;
+export interface BaseColors {
+  primary: string;
+  secondary: string;
+  background: string;
 }
 
-export interface Neutral {
-  darkest: string;
-  dark: string;
-  default: string;
-  light: string;
+export interface SurfaceColors {
   white: string;
+  highlight: string;
+  subdued: string;
+  hovered: string;
+}
+
+export interface TextColors {
+  default: string;
+  subdued: string;
+  disabled: string;
+  highlightDefault: string;
+  highlightSubdued: string;
+}
+
+export interface BorderColors {
+  default: string;
+  subdued: string;
+  depressed: string;
+}
+
+export interface ActionColors {
+  primary: {
+    default: string;
+    hovered: string;
+    pressed: string;
+  };
+  secondary: {
+    default: string;
+    pressed: string;
+  };
+}
+
+export interface DecorativeColors {
+  primary: string;
+  secondary: string;
+  tertiary: string;
 }
 
 export interface Colors {
-  brand: Brand;
-  neutral: Neutral;
+  base: BaseColors;
+  surface: SurfaceColors;
+  text: TextColors;
+  border: BorderColors;
+  actions: ActionColors;
+  decorative: DecorativeColors;
 }
 
 export interface Border {

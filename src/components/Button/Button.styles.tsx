@@ -12,15 +12,22 @@ export const CustomButton = styled.button`
 
   ${({ theme }) => `
     background-color: transparent;
-    border-color: ${theme.colors.neutral.dark};
-    color: ${theme.colors.neutral.dark};
+    border-color: ${theme.colors.text.subdued};
+    color: ${theme.colors.text.subdued};
     font-size: ${theme.typography.fontSize.xsmall};
     font-weight: ${theme.typography.fontWeight.bold};
     padding: ${theme.spacing.medium} ${theme.spacing.large};
 
-    &:hover {
-      background-color: ${theme.colors.brand.primary.default};
-      color: ${theme.colors.neutral.white};
+    &:hover, &:focus-visible {
+      background-color: ${theme.colors.actions.primary.hovered};
+    }
+
+    &:active {
+      background-color: ${theme.colors.actions.primary.pressed};
+    }
+
+    &:hover, &:focus-visible, &:active {
+      color: ${theme.colors.actions.primary.default};
     }
   `}
 `;

@@ -15,7 +15,7 @@ export const CustomButton = styled.button`
 
     &:hover {
       & > svg > path {
-        fill: ${theme.colors.brand.primary.default};
+        fill: ${theme.colors.base.primary};
       }
     }
   `}

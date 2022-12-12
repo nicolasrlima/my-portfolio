@@ -15,7 +15,7 @@ const HamburgerMenu = (props: SVGProps<SVGSVGElement>) => {
     >
       <path
         d="M0 0H24V3H0V0ZM0 7.5H24V10.5H0V7.5ZM0 15H24V18H0V15Z"
-        fill={colors.neutral.darkest}
+        fill={colors.text.default}
       />
     </svg>
   );

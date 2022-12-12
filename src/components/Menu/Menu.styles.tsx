@@ -3,7 +3,7 @@ import { MenuProps } from "./Menu.types";
 
 export const MenuContainer = styled.div<Pick<MenuProps, "isOpen">>`
   align-items: center;
-  background-color: ${({ theme }) => theme.colors.neutral.white};
+  background-color: ${({ theme }) => theme.colors.base.background};
   display: flex;
   height: 100vh;
   justify-content: center;
@@ -29,7 +29,7 @@ export const MenuNavContainer = styled.nav`
 `;
 
 export const MenuLinkDivider = styled.hr`
-  background-color: ${({ theme }) => theme.colors.brand.primary.default};
+  background-color: ${({ theme }) => theme.colors.base.primary};
   border: 0;
   border-radius: 50%;
   height: 4px;

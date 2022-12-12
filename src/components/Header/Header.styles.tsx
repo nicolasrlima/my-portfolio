@@ -9,7 +9,7 @@ export const HeaderContainer = styled.header`
   padding: 0 16px;
 
   ${({ theme }) => `
-    background-color: ${theme.colors.brand.secondary.default};
+    background-color: ${theme.colors.decorative.primary};
   `}
 
   @media (min-width: ${({ theme }) => theme.breakpoints.mobile}) {

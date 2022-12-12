@@ -6,23 +6,44 @@ export const theme: RootTheme = {
     tablet: "1024px",
   },
   colors: {
-    brand: {
-      primary: {
-        darkest: "#191238",
-        dark: "#291C62",
-        default: "#705DCB",
-        light: "#A58BFF",
-        lightest: "#EEF1FE",
-      },
-      secondary: { default: "#FDF9D3" },
-      tertiary: { default: "#E9FBFE" },
+    base: {
+      primary: "#705DCB",
+      secondary: "#D6D6D6",
+      background: "#FFFFFF",
     },
-    neutral: {
-      darkest: "#0C091C",
-      dark: "#53515D",
-      default: "#828088",
-      light: "#D6D6D6",
+    surface: {
       white: "#FFFFFF",
+      highlight: "#EEF1FE",
+      subdued: "#E9FBFE",
+      hovered: "#291C62",
+    },
+    text: {
+      default: "#0C091C",
+      subdued: "#53515D",
+      disabled: "#D6D6D6",
+      highlightDefault: "#705DCB",
+      highlightSubdued: "#9CA5FA",
+    },
+    border: {
+      default: "#53515D",
+      subdued: "#D6D6D6",
+      depressed: "#0C091C",
+    },
+    actions: {
+      primary: {
+        default: "#FFFFFF",
+        hovered: "#705DCB",
+        pressed: "#544699",
+      },
+      secondary: {
+        default: "#D6D6D6",
+        pressed: "#828088",
+      },
+    },
+    decorative: {
+      primary: "#FDF9D3",
+      secondary: "#E9FBFE",
+      tertiary: "#191238",
     },
   },
   border: {
