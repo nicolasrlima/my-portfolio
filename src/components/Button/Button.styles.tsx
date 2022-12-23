@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const CustomButton = styled.button`
+const Button = styled.button`
   cursor: pointer;
   border-style: solid;
   border-bottom-width: 1px;
@@ -31,3 +31,5 @@ export const CustomButton = styled.button`
     }
   `}
 `;
+
+export default Button;
