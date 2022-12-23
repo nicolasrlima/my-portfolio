@@ -13,8 +13,17 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
 } from "components/DropdownMenu";
+import { FormattedMessage } from "react-intl";
+import { useRouter } from "next/router";
 
 const Home: NextPage = () => {
+  const { push } = useRouter();
+  const changeLocale = (locale: string) => {
+    push("/", "/", {
+      locale,
+    });
+  };
+
   return (
     <div>
       <Head>
@@ -28,19 +37,35 @@ const Home: NextPage = () => {
 
       <main>
         <Header logo={<Logo />}>
-          <Link href="#about">About</Link>
-          <Link href="#career">Career</Link>
-          <Link href="#now">Now</Link>
-          <Link href="#contact">Contact</Link>
-          <Button>Resume</Button>
+          <Link href="#about">
+            <FormattedMessage id="header.about" />
+          </Link>
+          <Link href="#career">
+            <FormattedMessage id="header.career" />
+          </Link>
+          <Link href="#now">
+            <FormattedMessage id="header.now" />
+          </Link>
+          <Link href="#contact">
+            <FormattedMessage id="header.contact" />
+          </Link>
+          <Button>
+            <FormattedMessage id="header.resume" />
+          </Button>
           <DropdownMenuRoot>
             <DropdownMenuTrigger asChild>
               <IconButton aria-label="Change language" icon={<Languages />} />
             </DropdownMenuTrigger>
             <DropdownMenuContent>
-              <DropdownMenuItem>English</DropdownMenuItem>
-              <DropdownMenuItem>Spanish</DropdownMenuItem>
-              <DropdownMenuItem>Portuguese</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => changeLocale("en")}>
+                English
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => changeLocale("es")}>
+                Spanish
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => changeLocale("pt")}>
+                Portuguese
+              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenuRoot>
         </Header>

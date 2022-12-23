@@ -5,8 +5,8 @@ import { cssReset } from "./reset.styles";
 const GlobalStyle = () => (
   <Global
     styles={css`
-      ${cssReset}
       ${cssGeneral}
+      ${cssReset}
     `}
   />
 );

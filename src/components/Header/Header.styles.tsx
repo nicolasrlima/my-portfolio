@@ -40,7 +40,9 @@ export const HeaderHamburgerContainer = styled.div<Pick<MenuProps, "isOpen">>`
   `}
 
   @media (min-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    display: none;
+    ${({ isOpen }) => `
+      display: ${isOpen ? "block" : "none"};
+    `}
   }
 `;
 
