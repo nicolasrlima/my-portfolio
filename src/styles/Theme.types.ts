@@ -95,19 +95,22 @@ export interface Spacing {
 }
 
 export interface FontFamily {
-  logo: string;
-  primary: string;
+  yesevaOne: "Yeseva One";
+  epilogue: "Epilogue";
+  roboto: "Roboto";
 }
 
 export interface FontSize {
-  giant: string;
-  huge: string;
-  xlarge: string;
-  large: string;
-  medium: string;
-  small: string;
-  xsmall: string;
-  micro: string;
+  giant: "5.25rem";
+  huge: "4.5rem";
+  xlarge: "3.5rem";
+  large: "2.5rem";
+  medium: "2rem";
+  small: "1.5rem";
+  xsmall: "1.25rem";
+  micro: "1rem";
+  nano: "0.875rem";
+  pico: "0.75rem";
 }
 
 export interface FontWeight {
@@ -118,12 +121,13 @@ export interface FontWeight {
 }
 
 export interface LineHeight {
-  xlarge: string;
-  large: string;
-  medium: string;
-  small: string;
-  xsmall: string;
-  micro: string;
+  xlarge: "6rem";
+  large: "5.25rem";
+  medium: "4rem";
+  small: "2.5rem";
+  xsmall: "2rem";
+  micro: "1.5rem";
+  auto: "auto";
 }
 
 export interface Typography {

@@ -66,8 +66,9 @@ export const theme: RootTheme = {
   },
   typography: {
     fontFamily: {
-      logo: "Yeseva One",
-      primary: "Epilogue",
+      yesevaOne: "Yeseva One",
+      epilogue: "Epilogue",
+      roboto: "Roboto",
     },
     fontSize: {
       giant: "5.25rem",
@@ -78,6 +79,8 @@ export const theme: RootTheme = {
       small: "1.5rem",
       xsmall: "1.25rem",
       micro: "1rem",
+      nano: "0.875rem",
+      pico: "0.75rem",
     },
     fontWeight: {
       light: 300,
@@ -92,6 +95,7 @@ export const theme: RootTheme = {
       small: "2.5rem",
       xsmall: "2rem",
       micro: "1.5rem",
+      auto: "auto",
     },
   },
 };

@@ -7,7 +7,9 @@ const Link = ({ children, ...props }: LinkProps) => {
   return (
     <NextLink passHref {...props}>
       <CustomAnchor>
-        <Typography fontSize="micro">{children}</Typography>
+        <Typography color="subdued" className="base__link" variant="body">
+          {children}
+        </Typography>
       </CustomAnchor>
     </NextLink>
   );

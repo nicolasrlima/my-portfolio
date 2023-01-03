@@ -4,53 +4,59 @@ import {
   FontSize,
   FontWeight,
   LineHeight,
+  TextColors,
 } from "../../styles/Theme.types";
+
+interface VariantsValues {
+  fontFamily: keyof FontFamily;
+  fontSize: keyof FontSize;
+  fontWeight: keyof FontWeight;
+  lineHeight: keyof LineHeight;
+}
+
+export interface MediaQueryVariants {
+  desktop: VariantsValues;
+  mobile: VariantsValues;
+}
+
+export type Variants =
+  | "xlarge"
+  | "large"
+  | "medium"
+  | "small"
+  | "heading"
+  | "subheading"
+  | "button"
+  | "body"
+  | "subtitle"
+  | "caption";
 
 export interface TypographyProps extends HTMLAttributes<HTMLElement> {
   /**
-   * Determines the HTML tag that will be rendered.
+   * Determines the HTML component that will be rendered.
    *
    * @remarks
    * See {@link JSX.IntrinsicElements} for available options.
    *
    * @defaultValue `span`
    */
-  as?: ElementType<any>;
+  component?: ElementType<any>;
   /**
-   * Determines the font family.
+   * Determines the text color.
    *
    * @remarks
-   * See {@link FontFamily} for available options.
+   * See {@link TextColors} for available options.
    *
-   * @defaultValue `primary`
+   * @defaultValue `default`
    */
-  fontFamily?: keyof FontFamily;
+  color?: keyof TextColors;
   /**
-   * Determines the font size.
+   * Applies the styles according to the variant selected
    *
    * @remarks
-   * See {@link FontSize} for available options.
+   * See {@link Variants} for available options and more details
    *
-   * @defaultValue `medium`
+   * @defaultValue `body`
    */
-  fontSize?: keyof FontSize;
-  /**
-   * Determines the font weight.
-   *
-   * @remarks
-   *
-   * See {@link FontWeight} for available options.
-   *
-   * @defaultValue `regular`
-   */
-  fontWeight?: keyof FontWeight;
-  /**
-   * Determines the line height.
-   *
-   * @remarks
-   * See {@link LineHeight} for available options.
-   *
-   * @defaultValue `medium`
-   */
-  lineHeight?: keyof LineHeight;
+  variant?: Variants;
 }

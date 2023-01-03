@@ -3,7 +3,7 @@ import { renderWithTheme } from "tests/utils";
 import Typography from "../Typography";
 
 it("renders a Typography", () => {
-  renderWithTheme(<Typography as="h1">Teste</Typography>);
+  renderWithTheme(<Typography component="h1">Teste</Typography>);
 
   const textComponent = screen.getByRole("heading");
 
