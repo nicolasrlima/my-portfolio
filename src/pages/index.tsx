@@ -1,10 +1,9 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { Button } from "components/Button";
 import { Header } from "components/Header";
-import { Typography } from "components/Typography";
 import { Logo } from "icons/Logo";
 import HeaderContent from "templates/HeaderContent/HeaderContent";
+import Cover from "templates/Cover/Cover";
 
 const Home: NextPage = () => {
   return (
@@ -22,8 +21,7 @@ const Home: NextPage = () => {
         <Header logo={<Logo />}>
           <HeaderContent />
         </Header>
-        <Button>Button</Button>
-        <Typography fontFamily="primary">Typography</Typography>
+        <Cover />
       </main>
     </div>
   );
