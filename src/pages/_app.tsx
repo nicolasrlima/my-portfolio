@@ -1,18 +1,21 @@
-import { ThemeProvider } from "@emotion/react";
 import type { AppProps } from "next/app";
-import { useRouter } from "next/router";
-import { IntlProvider } from "react-intl";
+import English from "../locales/en";
 import GlobalStyle from "../styles/GlobalStyle";
+import { IntlProvider } from "react-intl";
+import Portuguese from "../locales/pt";
+import { SupportedLanguages } from "hooks/useLocale/types";
+import { ThemeProvider } from "@emotion/react";
 import { theme } from "../styles/theme";
-import Portuguese from "../locales/pt.json";
-import English from "../locales/en.json";
+import { useRouter } from "next/router";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const { locale } = useRouter();
-  const [shortLocale] = locale ? locale.split("-") : ["en"];
+  const [shortLocale] = locale
+    ? locale.split("-")
+    : [SupportedLanguages.ENGLISH];
 
   let messages;
-  if (locale === "pt") {
+  if (locale === SupportedLanguages.PORTUGUESE) {
     messages = Portuguese;
   } else {
     messages = English;

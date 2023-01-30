@@ -1,5 +1,5 @@
-import { useRouter } from "next/router";
 import { SupportedLanguages } from "./types";
+import { useRouter } from "next/router";
 
 export const useLocale = () => {
   const { push } = useRouter();
