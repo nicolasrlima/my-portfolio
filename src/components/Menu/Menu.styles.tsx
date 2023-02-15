@@ -1,5 +1,5 @@
-import styled from "@emotion/styled";
 import { MenuProps } from "./Menu.types";
+import styled from "@emotion/styled";
 
 export const MenuContainer = styled.div<Pick<MenuProps, "isOpen">>`
   align-items: center;
@@ -17,8 +17,8 @@ export const MenuContainer = styled.div<Pick<MenuProps, "isOpen">>`
   ${({ isOpen }) =>
     !isOpen &&
     `
-    transform: translate3d(100vw, 0, 0)
-  `}
+      transform: translate3d(100vw, 0, 0)
+    `}
 `;
 
 export const MenuNavContainer = styled.nav`
@@ -26,6 +26,10 @@ export const MenuNavContainer = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  ${({ theme }) => `
+    gap: ${theme.spacing.medium};
+  `}
 `;
 
 export const MenuLinkDivider = styled.hr`

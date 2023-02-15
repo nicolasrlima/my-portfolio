@@ -1,21 +1,24 @@
-import { FormattedMessage } from "react-intl";
-import { Link } from "components/Link";
-import { Button } from "components/Button";
 import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuRoot,
   DropdownMenuTrigger,
 } from "components/DropdownMenu";
+
+import { Button } from "components/Button";
+import { FormattedMessage } from "react-intl";
+import { Header } from "components/Header";
 import { IconButton } from "components/IconButton";
 import { Languages } from "icons/LanguagesMenu";
+import { Link } from "components/Link";
+import { Logo } from "icons/Logo";
 import { useLocale } from "hooks/useLocale";
 
-const HeaderContent = () => {
+const HeaderWithContent = () => {
   const { changeLocale, SupportedLanguages } = useLocale();
 
   return (
-    <>
+    <Header logo={<Logo />}>
       <Link href="#about">
         <FormattedMessage id="header.about" />
       </Link>
@@ -58,8 +61,8 @@ const HeaderContent = () => {
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenuRoot>
-    </>
+    </Header>
   );
 };
 
-export default HeaderContent;
+export default HeaderWithContent;

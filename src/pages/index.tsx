@@ -1,9 +1,7 @@
 import About from "templates/About";
 import Cover from "templates/Cover";
 import Head from "next/head";
-import { Header } from "components/Header";
-import HeaderContent from "templates/HeaderContent/HeaderContent";
-import { Logo } from "icons/Logo";
+import HeaderWithContent from "templates/HeaderWithContent";
 import type { NextPage } from "next";
 
 const Home: NextPage = () => {
@@ -19,9 +17,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <Header logo={<Logo />}>
-          <HeaderContent />
-        </Header>
+        <HeaderWithContent />
         <Cover />
         <About />
       </main>

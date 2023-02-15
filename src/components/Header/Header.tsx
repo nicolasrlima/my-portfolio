@@ -1,19 +1,23 @@
-import { Link } from "components/Link";
-import { Menu } from "components/Menu";
-import { Close } from "icons/Close";
-import { HamburgerMenu } from "icons/HamburgerMenu";
 import { Children, useState } from "react";
 import {
   HeaderContainer,
   HeaderHamburgerContainer,
   HeaderNavContainer,
 } from "./Header.styles";
+
+import { Close } from "icons/Close";
+import { HamburgerMenu } from "icons/HamburgerMenu";
 import { HeaderProps } from "./Header.types";
+import { Link } from "components/Link";
+import { Menu } from "components/Menu";
 
 const Header = ({ children, logo, ...props }: HeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => setIsMenuOpen((prev) => !prev);
+  const toggleMenu = () => {
+    document.body.style.overflow = isMenuOpen ? "auto" : "hidden";
+    setIsMenuOpen((prev) => !prev);
+  };
 
   const childrenThatAreLinks = Children.map(children, (child: any) => {
     if (child?.type === Link) {
@@ -36,7 +40,9 @@ const Header = ({ children, logo, ...props }: HeaderProps) => {
         <HamburgerMenu className="menu-icon" id="hamburger-menu" />
         <Close className="menu-icon" id="close-menu" />
       </HeaderHamburgerContainer>
-      <Menu isOpen={isMenuOpen}>{childrenThatAreLinks}</Menu>
+      <Menu isOpen={isMenuOpen} onLinkClick={toggleMenu}>
+        {childrenThatAreLinks}
+      </Menu>
     </HeaderContainer>
   );
 };
