@@ -18,6 +18,7 @@ import { useMemo, useRef, useState } from "react";
 import AboutPicture from "assets/about-picture.png";
 import Image from "next/image";
 import { Typography } from "components/Typography";
+import { theme } from "styles/theme";
 
 const ABOUT_CATEGORIES: Array<AboutTabs> = ["professional", "personal"];
 
@@ -68,6 +69,13 @@ const About = () => {
     };
   }, [tabsListRef, selectedTabId]);
 
+  const isInMobileView = useMemo(() => {
+    if (typeof window === "undefined") return false;
+    const { innerWidth } = window;
+    const { mobile } = theme.breakpoints;
+    return innerWidth <= parseInt(mobile, 10);
+  }, []);
+
   return (
     <AboutContainer id="about">
       <AboutTitleContainer>
@@ -82,6 +90,7 @@ const About = () => {
         </PictureContainer>
         <TabsRoot
           defaultValue={ABOUT_CATEGORIES[0]}
+          orientation={isInMobileView ? "horizontal" : "vertical"}
           onValueChange={(e) => setSelectedTabId(e as AboutTabs)}
         >
           <TabsList
